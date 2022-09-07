@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list {
+    margin: 20px;
+    font-size: 0;
+    background-color: orangered;
+    text-align: center;
+}
+
+.list-item {
+    display: inline-block;
+    font-size: 16px;
+    position: relative;
+    background-color: orangered;
+    padding: 10px;
+    text-align: center;
+}
+
+.link {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+.list-item:hover{
+    background-color: rgb(255, 106, 0);
+}
+
+.sub-nav-list {
+    display: none;
+   
+}
+.sub-nav-list-tutorials{
+    display: none;
+}
+.sub-nav-list-Other{
+    display: none;
+}
+.list-item:hover > .sub-nav-list {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.sub-list-item:hover > .sub-nav-list-tutorials {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    
+}
+.sub-list-item:hover > .sub-nav-list-Other {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 130px
+}
+.sub-list-item {
+    display: block;
+    padding: 10px;
+    background-color: orangered;
+
+}
