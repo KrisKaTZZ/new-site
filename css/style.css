@@ -3,10 +3,13 @@
     padding: 0;
     list-style: none;
 }
+body{
+    background-color: rgb(36, 36, 36);
+}
 
 .nav-list {
     font-size: 0;
-    background-color: orangered;
+    background-color: rgb(139, 139, 139);
     text-align: center;
 }
 
@@ -14,7 +17,7 @@
     display: inline-block;
     font-size: 16px;
     position: relative;
-    background-color: orangered;
+    background-color: rgb(139, 139, 139);
     padding: 10px;
     text-align: center;
 }
@@ -27,7 +30,7 @@
 }
 
 .list-item:hover{
-    background-color: rgb(255, 106, 0);
+    background-color: rgb(112, 112, 112);
 }
 
 .sub-nav-list {
@@ -65,6 +68,49 @@
 .sub-list-item {
     display: block;
     padding: 10px;
-    background-color: orangered;
+    background-color: rgb(139, 139, 139);
 
 }
+.content{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.header{
+    color: white;
+    font-size: 40px;
+}
+.paragraph{
+    border: 2px solid white;
+    color: white;
+    font-size: 25px;
+}
+.paragraph::first-letter{
+    font-size: 32px;
+    color: chartreuse;
+}
+.paragraph::after{
+    content:'<<<';
+    background-color: aqua;
+}
+.paragraph::before{
+    content:'>>>';
+    background-color: aqua;
+}
+
+.licontent{
+    list-style: none;
+    padding-top: 30px;
+    color: white;
+    font-size: 35pdx
+}
+.licontent::before{
+    content:'';
+display: inline-block;
+background-image: url('../img/itsme.JPG');
+background-size: contain;
+width: 10px;
+height: 10px;
+
+}
+
