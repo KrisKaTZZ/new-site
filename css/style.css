@@ -1,10 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-body{
+
+body {
     background-color: rgb(36, 36, 36);
+
 }
 
 .nav-list {
@@ -38,8 +40,9 @@ body{
     display: block;
     position: absolute;
     background-color: black;
-    transition: all 0.5s ease-in ;
+    transition: all 0.5s ease-in;
 }
+
 .link::after {
     width: 0;
     height: 0.1em;
@@ -49,37 +52,43 @@ body{
     display: block;
     position: absolute;
     background-color: black;
-    transition: all 0.5s ease-in  ;
+    transition: all 0.5s ease-in;
 }
-.link:hover{
+
+.link:hover {
     color: black;
-    transition: all .8s ;
+    transition: all .8s;
 }
-.link:hover::after{
+
+.link:hover::after {
     width: 80%;
-   
+
 }
-.link:hover::before{
+
+.link:hover::before {
     width: 80%;
 }
 
-.list-item:hover{
+.list-item:hover {
     color: black;
     background-color: rgb(112, 112, 112);
-    transition: all .8s ;
+    transition: all .8s;
 }
 
 .sub-nav-list {
     display: none;
-   
+
 }
-.sub-nav-list-tutorials{
+
+.sub-nav-list-tutorials {
     display: none;
 }
-.sub-nav-list-Other{
+
+.sub-nav-list-Other {
     display: none;
 }
-.list-item:hover > .sub-nav-list {
+
+.list-item:hover>.sub-nav-list {
     display: block;
     position: absolute;
     top: 100%;
@@ -87,49 +96,159 @@ body{
     right: 0;
 }
 
-.sub-list-item:hover > .sub-nav-list-tutorials {
+.sub-list-item:hover>.sub-nav-list-tutorials {
     display: block;
     position: absolute;
     top: 0;
     left: 100%;
-    
+
 }
-.sub-list-item:hover > .sub-nav-list-Other {
+
+.sub-list-item:hover>.sub-nav-list-Other {
     display: block;
     position: absolute;
     top: 0;
     left: 100%;
     width: 130px
 }
+
 .sub-list-item {
     display: block;
     padding: 10px;
     background-color: rgb(139, 139, 139);
 
 }
-.content{
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 20px;
+
+/* Cards front */
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    perspective: 1000px;
+    
 }
-.header{
-    color: white;
-    font-size: 40px;
+
+.card-flip{
+    position: relative;
+    transform-style: preserve-3d ;
+    transition: 0.6s;
+   
 }
-.paragraph{
-    border: 2px solid white;
-    color: white;
+
+
+
+
+.card-flip,
+.front,
+.back {
+    width: 225px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.front,
+.back {
+    background-color: rgba(255, 217, 0, 0.702);
+    border: 1px solid gold;
+    border-radius: 3px;
+    padding: 0 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    
+}
+
+.front{
+    transform: rotateY(0);
+    z-index: 2 ;
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+.container:hover .card-flip{
+    transform: rotateY(180deg) ;
+}
+
+.header_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header_card, .name {
+    color: blanchedalmond;
     font-size: 25px;
-}
-.paragraph::first-letter{
-    font-size: 32px;
-    color: chartreuse;
+
 }
 
-.licontent{
-    list-style: none;
-    padding-top: 30px;
+.last_name{
+    font-size: 14px;
+    color: gray;
+    background-color: rgba(65, 65, 65, 0.55);
+    margin-bottom: 10px;
+}
+
+.img_container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.img_container img {
+    width: 98%;
+    height: 98%;
+    background-image: url('../img/fon.jpg');
+    background-size: cover;
+    position: absolute;
+    border: 3px solid silver;
+    top: 0;
+    bottom: 0;
+}
+
+
+
+.flip-btn{
+    background-color: goldenrod;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+    display: block;
     color: white;
-    font-size: 35px
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 10px;
 }
 
+/* Cards back */
+.header_card_back{
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.back_img{
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/fon.jpg');
+    background-size: cover;
+}
+
+.intro_list a{
+color: black;
+text-decoration: none;
+}
+
+.description {
+    padding: 15px 0;
+    text-align: justify;
+    color: rgb(32, 32, 32);
+}
